@@ -19,8 +19,9 @@ jobs:
           sudo rsync -av --delete \
             --exclude='.git' \
             --exclude='.github' \
-            ./ /var/www/html/
+            ./Twitter/ /var/www/html/
 
       - name: Restart Nginx
         run: |
           sudo systemctl restart nginx
+
